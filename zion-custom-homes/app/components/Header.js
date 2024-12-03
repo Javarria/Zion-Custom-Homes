@@ -1,38 +1,82 @@
-const Header = () => {
-  // This component creates a header with 5 buttons
-  // The buttons are mapped from an array of length 5
-  // Each button is given a different text value based on its index
-  // The text values are "Services", "About", "Home", "Process", and "Build Your Dream"
-  // The buttons are given a hover effect of a dark gray background
-  // The buttons are given a margin of 3.4rem on either side
-  // The buttons are given a rounded corner
-  // The buttons are given a font style of Ivypresto-Display
-  // The buttons are given a text color of white
+"use client";
+import { useState, useEffect, useRef } from "react";
+
+function Header() {
+  const [isVisible, setIsVisible] = useState(false);
+  const navLinksRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      }
+    );
+
+    if (navLinksRef.current) {
+      observer.observe(navLinksRef.current);
+
+      return () => {
+        observer.unobserve(navLinksRef.current);
+      };
+    }
+  }, [navLinksRef]);
+
   return (
-    <nav className="flex justify-center bg-[#000] px-8 py-2">
-      {[...Array(5)].map((_, index) => (
-        <button
-          key={index}
-          className="text-white text-2xl hover:bg-[#333] p-1 mx-8 rounded font-[Ivypresto-Display]"
-          style={{
-            margin: "1 5rem",
-            fontWeight: "500",
-            letterSpacing: ".15rem",
-            fontSize: "0.99925rem",
-          }}
-        >
-          {index === 0
-            ? "ABOUT US"
-            : index === 1
-            ? "SERVICES"
-            : index === 2
-            ? "ZION HOMES"
-            : index === 3
-            ? "CONTACT US"
-            : "BUILD YOUR DREAM"}
-        </button>
-      ))}
-    </nav>
+    <div id="header">
+      <nav className="flex justify-center bg-black py-2">
+        <div ref={navLinksRef} id="nav-links" className="hidden md:flex gap-2">
+          <a
+            href="/about"
+            className={`transition-opacity duration-1000 ease-in-out ${
+              isVisible ? "opacity-100" : "opacity-0"
+            } font-light text-md text-white hover:bg-[#333] px-16 py-4 mx-7 rounded font-[Ivypresto-Display]`}
+            style={{ letterSpacing: "0.20em", textAlign: "center" }}
+          >
+            ABOUT US
+          </a>
+          <a
+            href="/services"
+            className={`transition-opacity duration-1000 ease-in-out ${
+              isVisible ? "opacity-100" : "opacity-0"
+            } font-light text-md text-white hover:bg-[#333] px-6 py-4 mx-7 rounded font-[Ivypresto-Display]`}
+            style={{ letterSpacing: "0.20em", textAlign: "center" }}
+          >
+            SERVICES
+          </a>
+          <a
+            href="/"
+            className={`transition-opacity duration-900 ease-in-out ${
+              isVisible ? "opacity-100" : "opacity-0"
+            } font-light text-md text-[#A87900] hover:bg-[#333] px-6 py-4 mx-4 rounded font-[Ivypresto-Display]`}
+            style={{ letterSpacing: "0.20em", textAlign: "center" }}
+          >
+            ZION HOMES
+          </a>
+          <a
+            href="/build-your-dream"
+            className={`transition-opacity duration-1000 ease-in-out ${
+              isVisible ? "opacity-100" : "opacity-0"
+            } font-light text-md text-white hover:bg-[#333] px-6 py-4 mx-7 rounded font-[Ivypresto-Display]`}
+            style={{ letterSpacing: "0.20em", textAlign: "center" }}
+          >
+            OUR PROCESS
+          </a>
+          <a
+            href="/contact"
+            className={`transition-opacity duration-1000 ease-in-out ${
+              isVisible ? "opacity-100" : "opacity-0"
+            } font-light text-md text-white hover:bg-[#333] px-6 py-4 mx-12 rounded font-[Ivypresto-Display]`}
+            style={{ letterSpacing: "0.20em", textAlign: "center" }}
+          >
+            CONTACT US
+          </a>
+        </div>
+      </nav>
+    </div>
   );
-};
+}
+
 export default Header;
