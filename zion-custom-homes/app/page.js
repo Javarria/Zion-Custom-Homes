@@ -39,7 +39,7 @@ export default function Home() {
           <div className="hero-buttons flex flex-col gap-12 items-center justify-center">
             <a
               href="#contact"
-              className="contact-us-button bg-transparent text-white px-20 py-3 rounded-lg font-[Ivypresto-Display] font-large outline outline-[1px] outline-[#A87900] transition duration-300 tracking-widest"
+              className="button contact-us-button bg-transparent text-white px-20 py-3 rounded-lg font-[Ivypresto-Display] font-large outline outline-[1px] outline-[#A87900] transition duration-300 tracking-widest"
               style={{ letterSpacing: "0.11em" }}
             >
               C O N T A C T &nbsp; U S

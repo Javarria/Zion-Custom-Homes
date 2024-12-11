@@ -9,25 +9,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    font-family: 'Ivypresto Display', sans-serif;
+    font-family: "Ivypresto Display", sans-serif;
     --background: #eee8e0;
     --foreground: #000000;
   }
 }
 
-h1{
-  font-family: 'Ivypresto Display', sans-serif;
+h1 {
+  font-family: "Ivypresto Display", sans-serif;
 }
 
 body {
-  font-family: 'Ivypresto Display', sans-serif;
+  font-family: "Ivypresto Display", sans-serif;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-*{
-  font-family: 'Ivypresto Display', sans-serif;
+* {
+  font-family: "Ivypresto Display", sans-serif;
 }
 
 .contact-us-button:hover {
@@ -49,3 +49,56 @@ body {
     width: 100%;
   }
 }
+
+/* triangle class */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 80px solid #a87900;
+  transform: rotate(90deg);
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* TESTING BUTTON */
+.button {
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  border-color: #a87900;
+  box-shadow: 0 0 10px #a87900;
+  transform: translateY(-2px);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #a87900;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #a87900;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #a87900;
+  }
+}
+
+

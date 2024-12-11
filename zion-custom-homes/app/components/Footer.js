@@ -10,7 +10,7 @@ const Footer = () => {
       ([entry]) => setIsVisible(entry.isIntersecting),
       {
         root: null,
-        rootMargin: "0px",
+        rootMargin: "900px",
         threshold: 1.0,
       }
     );
@@ -81,4 +81,6 @@ const Footer = () => {
     </div>
   );
 };
+
 export default Footer;
+
