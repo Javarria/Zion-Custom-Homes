@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -15,20 +18,33 @@
   }
 }
 
+@font-face {
+  font-family: 'Real IvyPresto'; /* Choose a name for your font */
+  src: url('/fonts/IvyprestoDisplay-Regular.otf') format('opentype'); /* Path to the .otf font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
-  font-family: "Ivypresto Display", sans-serif;
+  font-family: "Real IvyPresto", sans-serif;
 }
 
-body {
-  font-family: "Ivypresto Display", sans-serif;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+header{
+  font-family: "Real IvyPresto", sans-serif;
 }
 
-* {
-  font-family: "Ivypresto Display", sans-serif;
+
+.montserrat-Mfont {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
+
+
+
+
+
 
 .contact-us-button:hover {
   border-bottom-right-radius: 0;
@@ -47,6 +63,15 @@ body {
   }
   to {
     width: 100%;
+  }
+}
+
+@keyframes line-anim {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 52%;
   }
 }
 

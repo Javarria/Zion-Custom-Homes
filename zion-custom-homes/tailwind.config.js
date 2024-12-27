@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+fontFamily: {
+  montserrat: ['Montserrat', 'sans-serif'],
+  ivypresto: ['Real IvyPresto', 'sans-serif'],
+},
       // This section extends the default Tailwind CSS theme with custom colors.
       colors: {
         // 'background' and 'foreground' are CSS variables defined in the global styles.

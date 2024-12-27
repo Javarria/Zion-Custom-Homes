@@ -56,7 +56,7 @@ function Header() {
             ZION HOMES
           </a>
           <a
-            href="/build-your-dream"
+            href="/process"
             className={`transition-opacity duration-1000 ease-in-out ${
               isVisible ? "opacity-100" : "opacity-0"
             } font-light text-md text-white hover:bg-[#333] px-6 py-4 mx-7 rounded font-[Ivypresto-Display]`}

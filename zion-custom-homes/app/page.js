@@ -23,7 +23,7 @@ export default function Home() {
           style={{ marginTop: "-295px" }}
         >
           <h1
-            className="font-[Ivypresto-Display] opacity-0 animate-fade-in"
+            className="font-[Real-Ivypresto] opacity-0 animate-fade-in"
             style={{
               textAlign: "center",
               fontSize: "calc(5vw + 3.5rem)",
@@ -34,6 +34,7 @@ export default function Home() {
           >
             Bold is a luxury.
           </h1>
+
 
           {/* <!-- Contact Button --> */}
           <div className="hero-buttons flex flex-col gap-12 items-center justify-center">
