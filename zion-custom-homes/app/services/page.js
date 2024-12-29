@@ -1,10 +1,15 @@
+import ContactPreFooter from "../components/ContactPreFooter";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+// import ContactPreFooter from "../components/ContactPreFooter";
+// import Link from "next/link";
 
 const Services = () => {
   return (
     <div>
       <Header></Header>
+
+      <ContactPreFooter/>
       {/* Made to your taste */}
       <section className="bg-black text-white flex justify-center items-center h-screen">
         <h1
@@ -265,6 +270,8 @@ const Services = () => {
           
         </div>
       </section>
+
+      {/* <ContactPreFooter/> */}
 
       <Footer></Footer>
     </div>

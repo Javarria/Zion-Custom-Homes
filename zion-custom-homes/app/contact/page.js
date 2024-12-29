@@ -16,11 +16,11 @@ const Contact = () => {
 
             </section>
             {/* Section with contact input field */}
-            <section className="bg-white text-black text-6xl flex justify-center items-center min-h-[120vh]">
+            <section className="bg-white text-black text-6xl flex justify-center items-center min-h-[calc(240vh+15%)]">
                 {/* Wrap for Contact form */}
                 <div className="h-full w-full mx-auto p-12 border-2 border-red-500 relative">
                     {/* Line in between two columns */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-[1px] bg-[#A87900] h-full"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-[1px] bg-[#A87900] h-full md:block hidden"></div>
                     {/* Div containing two columns */}
                     <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-4">
                         {/* First Column (left) on contact */}
@@ -71,31 +71,56 @@ const Contact = () => {
                                     Send a message.
                                 </header>
                                 {/* Input fields and there headers  */}
-                                    <div>
-                                        <header className="text-black text-2xl font-bold font-montserrat">Name</header>
-                                        <input type="text" className="w-full border-2 border-black p-2" />
+                                    <div className="mb-6 pl-10 flex flex-col gap-2">
+                                        <header className="text-black text-[1.2rem] font-bold font-montserrat" style={{ fontWeight: 700, letterSpacing: "0.5px" }}>Name</header>
+                                        <input type="text" className="w-[95%] border border-[#A87900] p-2 text-lg h-[45px] font-montserrat font-thin" style={{ letterSpacing: "0.5px" }} />
                                     </div>
                                         
-                                    <div>
-                                        <header className="text-black text-2xl font-bold font-montserrat">Email</header>
-                                        <input type="email" className="w-full border-2 border-black p-2" />
+                                    <div className="mb-6 pl-10 flex flex-col gap-2">
+                                        <header className="text-black text-[1.2rem] font-bold font-montserrat" style={{ fontWeight: 700, letterSpacing: "0.5px" }}>Email</header>
+                                        <input type="email" className="w-[95%] border border-[#A87900] p-2 text-lg h-[45px] font-montserrat font-thin" style={{ letterSpacing: "0.5px" }} />
                                     </div>
 
-                                    <div>
-                                        <header className="text-black text-2xl font-bold font-montserrat">Phone</header>
-                                        <input type="tel" className="w-full border-2 border-black p-2" />
+                                    <div className="mb-6 pl-10 flex flex-col gap-2">
+                                        <header className="text-black text-[1.2rem] font-bold font-montserrat" style={{ fontWeight: 700, letterSpacing: "0.5px" }}>Phone</header>
+                                        <input type="tel" className="w-[95%] border border-[#A87900] p-2 text-lg h-[45px] font-montserrat font-thin" style={{ letterSpacing: "0.5px" }} />
                                     </div>
 
-                                    <div>
-                                        <header className="text-black text-2xl font-bold font-montserrat">Message</header>
-                                        <textarea rows="4" className="w-full border-2 border-black p-2" />
+                                    <div className="mb-6 pl-10 flex flex-col gap-2">
+                                        <header className="text-black text-[1.2rem] font-bold font-montserrat" style={{ fontWeight: 700, letterSpacing: "0.5px" }}>What are you interested in?</header>
+                                        <select className="w-[95%] border border-[#A87900] p-2 text-lg h-[45px]" defaultValue="N/A">
+                                            <option value="N/A" disabled >N/A</option>
+                                            <option value="Building a home">Building a home</option>
+                                            <option value="Refurbishing an existing home">Refurbishing an existing home</option>
+                                            <option value="Partner on a development project">Partner on a development project</option>
+                                            <option value="Need man for my project">Need man for my project</option>
+                                            <option value="Not Available">N/A</option>
+                                        </select>
                                     </div>
-                                    
-                                    <div>
-                                        <header className="text-black text-2xl font-bold font-montserrat">Budget</header>
-                                        <input type="number" className="w-full border-2 border-black p-2" />
-                                    </div>
-                            
+
+                                    <div className="mb-6 pl-10 flex flex-col gap-2">
+                                        <header className="text-black text-[1.2rem] font-bold font-montserrat" style={{ fontWeight: 700, letterSpacing: "0.5px" }}>Tell us more</header>
+                                        <textarea className="w-[95%] border border-[#A87900] p-2 text-lg h-[150px] font-montserrat font-thin" style={{ letterSpacing: "0.5px" }} rows={3}></textarea>
+                                    </div>  
+
+                                    <a
+              className="button mt-4 bg-black text-white py-2 px-1 rounded font-[Ivypresto-Display] text-2xl flex items-center justify-center hover:bg-white hover:text-[#A87900] hover:font-bold"
+              style={{
+                textAlign: "left",
+                marginLeft: "4px",
+                marginTop: "46px",
+                transform: "skewX(-40deg) scale(0.7)",
+                height: "70px",
+                width: "350px",
+              }}
+            >
+              <span
+                style={{ transform: "skewX(40deg)" }}
+                className="font-[Ivypresto-Display]"
+              >
+                SEND MESSAGE
+              </span>
+            </a>
                             </div>
                         </div>
 

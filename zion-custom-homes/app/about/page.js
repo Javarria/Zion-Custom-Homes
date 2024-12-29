@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ContactPreFooter from "../components/ContactPreFooter";
 const About = () => {
   return (
     <div>
@@ -251,6 +252,7 @@ const About = () => {
           </div>
         </div>
       </section>
+
 
       <Footer></Footer>
     </div>
